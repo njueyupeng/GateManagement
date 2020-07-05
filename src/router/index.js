@@ -44,9 +44,9 @@ export const constantRoutes = [
   },
 
   {
-    path: '/dashboard',
+    path: '/',
     component: Layout,
-    // redirect: '/dashboard',
+    redirect: '/dashboard',
     children: [{
       path: 'dashboard',
       name: 'Dashboard',
@@ -57,12 +57,31 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/person',
     children: [{
       path: 'person',
       name: 'Person',
       component: () => import('@/views/person/index'),
       meta: { title: '人员管理', icon: 'el-icon-user-solid' }
+    }]
+  },
+  {
+    path: '/',
+    component: Layout,
+    children: [{
+      path: 'equipment',
+      name: 'Equipment',
+      component: () => import('@/views/equipment/index'),
+      meta: { title: '设备管理', icon: 'equipment' }
+    }]
+  },
+  {
+    path: '/',
+    component: Layout,
+    children: [{
+      path: 'log',
+      name: 'Log',
+      component: () => import('@/views/log/index'),
+      meta: { title: '日志管理', icon: 'log' }
     }]
   },
 

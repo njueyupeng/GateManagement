@@ -2,7 +2,7 @@
   <div class="person-card">
     <div class="header">
       <span class="title">{{message.title}}</span>
-      <span class="badage">{{message.badage||'Today'}}</span>
+      <span class="badage" :style="{background:message.color}">{{message.bubble||'Today'}}</span>
     </div>
     <div class="container">
       <div v-for="(info,index) in message.info" :key="index" style="width:45%">
