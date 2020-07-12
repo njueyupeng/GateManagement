@@ -55,33 +55,63 @@ export const constantRoutes = [
     }]
   },
   {
-    path: '/',
+    path: '/person',
     component: Layout,
     children: [{
-      path: 'person',
+      path: '',
       name: 'Person',
       component: () => import('@/views/person/index'),
-      meta: { title: '人员管理', icon: 'el-icon-user-solid' }
+      meta: { title: '人员管理', icon: 'personManage' }
     }]
   },
   {
-    path: '/',
+    path: '/equipment',
     component: Layout,
     children: [{
-      path: 'equipment',
+      path: '',
       name: 'Equipment',
       component: () => import('@/views/equipment/index'),
       meta: { title: '设备管理', icon: 'equipment' }
     }]
   },
   {
-    path: '/',
+    path: '/log',
     component: Layout,
     children: [{
-      path: 'log',
+      path: '',
       name: 'Log',
       component: () => import('@/views/log/index'),
       meta: { title: '日志管理', icon: 'log' }
+    }]
+  },
+  {
+    path: '/alarm',
+    component: Layout,
+    children: [{
+      path: '',
+      name: 'alarm',
+      component: () => import('@/views/alarm/index'),
+      meta: { title: '告警管理', icon: 'el-icon-bell' }
+    }]
+  },
+  {
+    path: '/role',
+    component: Layout,
+    children: [{
+      path: '',
+      name: 'role',
+      component: () => import('@/views/role/index'),
+      meta: { title: '角色管理', icon: 'access' }
+    }]
+  },
+  {
+    path: '/personalInfo',
+    component: Layout,
+    children: [{
+      path: '',
+      name: 'personalInfo',
+      component: () => import('@/views/personalInfo/index'),
+      meta: { title: '个人中心', icon: 'role' }
     }]
   },
 
